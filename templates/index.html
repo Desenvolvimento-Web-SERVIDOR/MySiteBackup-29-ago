@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
-{%b block head %}
+
+{% block head %}
   {{super()}}
-  <style>
-  </style>
 {% endblock %}
-{% block body %}
-<h1>Hello, World!</h1>
+
+{% block navbar &}
+  {{super()}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% block page_content %}
+  <h1>Hello, World!</h1>
+  {% endblock &}
+{% endblock %}
+
+{% block scripts &}
+  {{super()}}
 {% endblock %}
