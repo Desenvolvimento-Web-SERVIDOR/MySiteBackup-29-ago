@@ -11,10 +11,9 @@ moment = Moment(app)
 def index():
     return render_template('index.html', current_time=datetime.utcnow())
 
-@app.route('/user/<nome>')
-def user(nome):
-
-    return render_template('user.html')
+@app.route('/user/<name>')
+def user(name):
+    return render_template('user.html', user = name)
 
 @app.errorhandler(404)
 def page_not_found(e):
