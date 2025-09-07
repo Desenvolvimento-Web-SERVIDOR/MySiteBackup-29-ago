@@ -2,11 +2,15 @@
 {% block title %}User{% endblock %}
 
 {% block page_content %}
+{% if name %}
 <div class="page-header">
-  {% if user %}
-  <h1>Hello, {{user}}!</h1>
-  {% else %}
-  <h1>Hello, Stranger!</h1>
-  {% endif %}
+  <h1>Olá, {{ name }}!</h1>
 </div>
+<div class=page_content">
+  <h2>Prontuário: {{prontuario}}</h2>
+  <h2>Instituição: {{instituicao}}</h2>
+</div>
+{% else %}
+<h1>Hello, Stranger!</h1>
+{% endif %}
 {% endblock %}
