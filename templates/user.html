@@ -1,8 +1,8 @@
 {% extends "base.html" %}
+
 {% block title %}User{% endblock %}
 
 {% block page_content %}
-{% if name %}
 <div class="page-header">
   <h1>Olá, {{ name }}!</h1>
 </div>
@@ -10,7 +10,4 @@
   <h2>Prontuário: {{prontuario}}</h2>
   <h2>Instituição: {{instituicao}}</h2>
 </div>
-{% else %}
-<h1>Hello, Stranger!</h1>
-{% endif %}
 {% endblock %}
