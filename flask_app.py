@@ -12,9 +12,9 @@ moment = Moment(app)
 def index():
     return render_template('index.html', current_time=datetime.utcnow())
 
-@app.route('/user/<name>/<prontuario>/<instituicao')
+@app.route('/user/<name>/<prontuario>/<instituicao>')
 def user(name, prontuario, instituicao):
-    return render_template('user.html', 
+    return render_template('user.html',
                            name=name,
                            prontuario=prontuario,
                            instituicao=instituicao);
